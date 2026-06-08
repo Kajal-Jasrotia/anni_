@@ -1,63 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Our Anniversary ❤️</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #ffdde1, #ee9ca7);
-      color: #fff;
-      text-align: center;
-    }
+<meta charset="UTF-8">
+<title>Our Anniversary ❤️</title>
 
-    header {
-      padding: 60px 20px;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
 
-    h1 {
-      font-size: 40px;
-    }
+h1 {
+  font-size: 50px;
+  margin-top: 60px;
+}
 
-    p {
-      font-size: 18px;
-    }
+p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: auto;
+}
 
-    .card {
-      background: rgba(0,0,0,0.2);
-      margin: 20px auto;
-      padding: 20px;
-      width: 80%;
-      border-radius: 15px;
-    }
+section {
+  background: rgba(0,0,0,0.2);
+  margin: 30px auto;
+  padding: 20px;
+  width: 80%;
+  border-radius: 20px;
+}
 
-    footer {
-      margin-top: 40px;
-      padding: 20px;
-      font-size: 14px;
-    }
-  </style>
+/* floating hearts */
+.heart {
+  position: fixed;
+  color: rgba(255,255,255,0.7);
+  animation: float 6s linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-10vh); opacity: 0; }
+}
+</style>
 </head>
 
 <body>
-  <header>
-    <h1>Happy Anniversary ❤️</h1>
-    <p>Every moment with you is my favorite memory.</p>
-  </header>
 
-  <div class="card">
-    <h2>Our Story</h2>
-    <p>This is just the beginning of forever with you 💕</p>
-  </div>
+<h1>Happy Anniversary ❤️</h1>
+<p>Every moment with you feels like my favourite story written by the universe.</p>
 
-  <div class="card">
-    <h2>Why I Love You</h2>
-    <p>You make my world brighter every day ✨</p>
-  </div>
+<section>
+<h2>Our Story</h2>
+<p>This is just the beginning of forever with you 💕</p>
+</section>
 
-  <footer>
-    Made with love ❤️
-  </footer>
+<section>
+<h2>Why I Love You</h2>
+<p>You make even ordinary days feel special ✨</p>
+</section>
+
+<section>
+<h2>Love Note</h2>
+<p>No matter where life takes us, I’ll always choose you ❤️</p>
+</section>
+
+<script>
+// floating hearts
+for (let i = 0; i < 20; i++) {
+  let heart = document.createElement("div");
+  heart.innerHTML = "❤️";
+  heart.className = "heart";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = (3 + Math.random() * 5) + "s";
+  heart.style.fontSize = (10 + Math.random() * 20) + "px";
+  document.body.appendChild(heart);
+}
+</script>
+
 </body>
 </html>
